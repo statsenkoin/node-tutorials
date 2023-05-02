@@ -10,6 +10,11 @@ async function listContacts() {
   return JSON.parse(contacts);
 }
 
+/**
+ *
+ * @param {*} contactId
+ * @returns
+ */
 async function getContactById(contactId) {
   const contacts = await listContacts();
   const result = contacts.find(({ id }) => id === contactId);
