@@ -1,0 +1,17 @@
+{
+  "name": "tutorials",
+  "version": "1.0.0",
+  "description": "tutorial tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "keywords": [],
+  "author": "Ihor Statsenko",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
