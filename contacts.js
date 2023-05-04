@@ -5,8 +5,8 @@ const { nanoid } = require('nanoid');
 const contactsPath = path.join(__dirname, 'db/contacts.json');
 
 /**
- * Requests the list of all contacts in database
- * @returns {array} list of objects of contacts
+ * Get the list of all contacts in database
+ * @returns {array} - list of objects of contacts
  */
 async function listContacts() {
   const contacts = await fs.readFile(contactsPath);
@@ -14,9 +14,9 @@ async function listContacts() {
 }
 
 /**
- * Gets one contact according to its id
+ * Get one contact according to its id
  * @param {string} contactId - id of contact
- * @returns {object} - object of contact or null, if no contact with such id in database
+ * @returns {object} - contact or null, if no contact with such id in database
  */
 async function getContactById(contactId) {
   const contacts = await listContacts();
@@ -27,7 +27,7 @@ async function getContactById(contactId) {
 /**
  * Remove contact from database by its id
  * @param {string} contactId - id of contact
- * @returns {object} - object of deleted contact or null, if no contact with such id in database
+ * @returns {object} - deleted contact or null, if no contact with such id in database
  */
 async function removeContact(contactId) {
   const contacts = await listContacts();
@@ -43,7 +43,7 @@ async function removeContact(contactId) {
  * @param {string} name - contact`s name
  * @param {string} email - contact`s email
  * @param {string} phone - contact`s phone number
- * @returns {object} - object of new contact
+ * @returns {object} - new contact
  */
 async function addContact(name, email, phone) {
   const contacts = await listContacts();
