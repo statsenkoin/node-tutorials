@@ -23,9 +23,9 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
         console.log(error.message);
       }
     case 'get':
-      const contactById = await contacts.getContactById(id);
-      return console.log('contactById :>> ', contactById);
       try {
+        const contactById = await contacts.getContactById(id);
+        return console.log('contactById :>> ', contactById);
       } catch (error) {
         console.log(error.message);
       }
